@@ -1,0 +1,501 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+  /* border-radius: 4px; */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+  border: 4px solid #f1f1f1;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+* {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+input,
+textarea
+
+/*.contenteditable?*/
+  {
+  -webkit-touch-callout: default;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+input[type=text],
+input[type=number],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  /* margin: 8px 0; */
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  background: #e9ebec;
+  font-family: 'Montserrat';
+  overflow: hidden;
+}
+
+.button {
+  cursor: pointer;
+  transition: opacity 0.1s;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+.button:active {
+  opacity: 0.6;
+}
+
+.popup-button {
+  background: #495da7;
+  color: white;
+  width: 100%;
+  text-align: center;
+  height: 48px;
+  line-height: 48px;
+}
+
+#root {
+  height: 100%;
+}
+
+
+/* menu */
+
+#root>.react-tabs {
+  height: 100%;
+}
+
+#root>.react-tabs>ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 60px;
+  gap: 2px;
+}
+
+#root>.react-tabs>ul>li {
+  display: block;
+  flex: 1;
+  text-align: center;
+  line-height: 60px;
+  background: #d6defb;
+}
+
+#root>.react-tabs>.react-tabs__tab-panel--selected {
+  height: calc(100% - 60px);
+}
+
+
+.row {
+  display: flex;
+  box-sizing: border-box;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.main {
+  padding: 16px;
+  height: 100%;
+  gap: 24px;
+}
+
+.main .products {
+  flex: 3 1 0;
+  height: 100%;
+}
+
+.main .bill {
+  flex: 2 1 0;
+  background: white;
+  height: 100%;
+  border-radius: 6px;
+}
+
+.bill .top {
+  background: #e3e6f3;
+  height: 64px;
+  line-height: 64px;
+  font-size: 28px;
+  font-weight: 500;
+  justify-content: space-between;
+}
+
+.bill .top *:first-child {
+  border-top-left-radius: 6px;
+}
+
+.bill .top *:last-child {
+  border-top-right-radius: 6px;
+}
+
+
+.bill .top *:nth-child(odd) {
+  background: #bcc5e1;
+  width: 64px;
+}
+
+.bill .content {
+  background: white;
+  justify-content: space-between;
+  /* align-content: space-between; */
+}
+
+.bill .content .dine-in {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-weight: 500;
+  outline: 3px solid #e9ebec;
+}
+
+
+.bill .content .list {
+  padding: 10px 18px;
+  max-height: calc(100% - 54px);
+  box-sizing: border-box;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex-wrap: wrap;
+  width: 100%;
+  /* display: flex; */
+  display: inline-block;
+  word-break: break-word;
+  font-size: 18px;
+}
+
+
+.bill .content .clear-sale {
+  color: #aaa;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-weight: 500;
+  outline: 3px solid #e9ebec;
+}
+
+.bill .content .bill-buttons {
+  height: 60px;
+  gap: 2px;
+  /* line-height: 60px; */
+}
+
+.bill .content .bill-buttons .bill-button {
+  line-height: 60px;
+  height: 100%;
+  flex: 1;
+  background: #e3e6f3;
+  font-size: 24px;
+  text-align: center;
+}
+
+.bill .content .charges {
+  height: 76px;
+  color: white;
+  text-align: center;
+  gap: 1px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.bill .content .charges * {
+  line-height: 72px;
+  height: 100%;
+  background: #495da7;
+}
+
+.bill .content .charges .split-bill {
+  width: 72px;
+  border-bottom-left-radius: 6px;
+}
+
+.bill .content .charges .charge {
+  flex: 1;
+  font-size: 32px;
+  border-bottom-right-radius: 6px;
+}
+
+
+
+.icon-button {
+  line-height: normal !important;
+  height: auto !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  gap: 6px;
+}
+
+.icon-button svg {
+  height: 32px !important;
+  font-size: 32px;
+}
+
+.top .icon-button {
+  color: #546AAD;
+}
+
+/* product */
+
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-gap: 24px 18px;
+  grid-auto-rows: 1fr;
+  grid-auto-columns: minmax(0, 1fr);
+  /* grid-auto-flow: column; */
+}
+
+.block {
+  border: 1px solid #ccc;
+  /* background: white; */
+  border-radius: 6px;
+  position: relative;
+}
+
+.block .image {
+  height: calc(100% - 24px);
+  display: flex;
+  justify-content: center;
+  /* Align horizontal */
+  align-items: center;
+  /* Align vertical */
+  font-size: 38px;
+  ;
+  text-align: center;
+  background: #959595;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.block .caption {
+  height: 24px;
+  line-height: 24px;
+  background: white;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  text-align: center;
+
+  text-overflow: ellipsis;
+  overflow: hidden;
+  /* width: 160px;  */
+  /* height: 1.2em;  */
+  white-space: nowrap;
+}
+
+.list table td {
+  padding: 8px 0px;
+}
+
+.list table td:nth-child(1) {
+  text-align: left;
+}
+
+.list table td:nth-child(2),
+.list table td:nth-child(3) {
+  text-align: right;
+}
+
+.ReactModal__Content>* {
+  margin: 8px 0px;
+}
+
+.ReactModal__Content *:first-child {
+  margin-top: 0px;
+}
+
+.ReactModal__Content *:last-child {
+  margin-bottom: 0px;
+}
+
+.popupblock {
+  gap: 16px;
+}
+
+.popupblock img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+}
+
+.popupblock .name {
+  height: 64px;
+  line-height: 64px;
+  margin: 0;
+}
+
+.popupblock .image {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 38px;
+  text-align: center;
+  background: #959595;
+  /* border-top-left-radius: 6px; */
+  /* border-top-right-radius: 6px; */
+  color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 64px;
+  height: 64px;
+}
+
+
+/* EDIT */
+
+
+.edit {
+  padding: 16px;
+  height: 100%;
+  gap: 24px;
+}
+
+.edit .products {
+  flex: 3 1 0;
+  height: 100%;
+}
+
+.edit .lists {
+  flex: 2 1 0;
+  background: white;
+  height: 100%;
+  border-radius: 6px;
+}
+
+
+.block .delete {
+  position: absolute;
+  top: -16px;
+  left: -16px;
+  font-size: 32px;
+  /* color: white; */
+}
+
+.lists .inside {
+  /* padding: 10px 18px; */
+  max-height: calc(100% - 120px);
+  box-sizing: border-box;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex-wrap: wrap;
+  width: 100%;
+  /* display: flex; */
+  display: inline-block;
+  word-break: break-word;
+  font-size: 18px;
+}
+
+.lists>.react-tabs {
+  height: 100%;
+  position: relative;
+}
+
+.lists>.react-tabs>ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 60px;
+  gap: 2px;
+}
+
+.lists>.react-tabs>ul>li {
+  display: block;
+  flex: 1 1;
+  text-align: center;
+  line-height: 60px;
+  background: #d6defb;
+}
+
+.trash {
+  height: 64px;
+  line-height: 64px;
+  margin: 0;
+  width: 64px;
+  text-align: center;
+  font-size: 24px;
+  /* margin-left: auto; */
+}
+
+.trash:hover {
+  background: #eee;
+}
+
+.lists>.react-tabs>.react-tabs__tab-panel--selected {
+  height: 100%;
+}
+
+.create {
+  width: 100%;
+  height: 60px;
+  background: #546AAD;
+  line-height: 60px;
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+  text-align: center;
+}
+
+.lists .name {
+  background: white;
+}
+
+.popupblock>.row {
+  gap: 16px;
+  flex: 1;
+}
+
+
+.lists>.react-tabs>ul>li:first-child {
+  border-top-left-radius: 6px;
+}
+
+
+.lists>.react-tabs>ul>li:last-child {
+  border-top-right-radius: 6px;
+}
+
